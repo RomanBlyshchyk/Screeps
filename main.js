@@ -39,7 +39,7 @@ function getCreepStats(){
     var harvesterNames = '';
     var builderNames = '';
     var upgraderNames = '';
-    var minerNames = '';
+    var minerNames = ''; //
     
     var builderCount = _.filter(Game.creeps, (creep) => creep.memory.role == 'builder').length;
     var harvesterCount = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester').length;
