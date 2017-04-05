@@ -11,7 +11,7 @@ var roleMiner = {
         var miner = _.filter(Game.creeps, (creep) => creep.memory.role == 'miner');
         //var oldMiner = _.filter(Game.creeps, (creep) => creep.ticksToLive < 100);
         if(miner.length < 2) {
-            if(Game.spawns['Spawn1'].createCreep([WORK,WORK,WORK,CARRY,MOVE], undefined, {role: 'miner'}) == ERR_NOT_ENOUGH_ENERGY){
+            if(Game.spawns['Spawn1'].createCreep([WORK,WORK,WORK,WORK,CARRY,MOVE], undefined, {role: 'miner'}) == ERR_NOT_ENOUGH_ENERGY){
                 //console.log('Cannot spawn miner.  Not enough energy');
             }else {
                 console.log('Spawning new miner');
