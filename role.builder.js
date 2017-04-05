@@ -5,7 +5,7 @@ var roleBuilder = {
         // Keep 2 creesp of this type alive:
         var builders = _.filter(Game.creeps, (creep) => creep.memory.role == 'builder');
         if(builders.length < 4) {
-            if(Game.spawns['Spawn1'].createCreep([WORK,WORK,WORK,CARRY,MOVE,MOVE], undefined, {role: 'builder'}) == ERR_NOT_ENOUGH_ENERGY){
+            if(Game.spawns['Spawn1'].createCreep([WORK,WORK,WORK,CARRY,MOVE,MOVE, MOVE], undefined, {role: 'builder'}) == ERR_NOT_ENOUGH_ENERGY){
                 console.log('Cannot spawn builder.  Not enough energy');
             }else {
                 console.log('Spawning new builder');
