@@ -15,6 +15,8 @@ NOTES:
  --> What is the next step? 
  --> May want to do some basic stats every 10-20 ticks or so, create a counter
  --> Make separate function for creapCreate, when the life of miner gets low,  create a new one right away.
+ --> Figure out Git!!!!
+ --> learn Repair
 
 */
 module.exports = {

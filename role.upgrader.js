@@ -6,7 +6,7 @@ var roleUpgrader = {
         // Keep 2 creesp of this type alive:
         var upgraders = _.filter(Game.creeps, (creep) => creep.memory.role == 'upgrader');
         if(upgraders.length < 4) {
-            if(Game.spawns['Spawn1'].createCreep([WORK,CARRY,CARRY,MOVE, MOVE], undefined, {role: 'upgrader'}) == ERR_NOT_ENOUGH_ENERGY){
+            if(Game.spawns['Spawn1'].createCreep([WORK,CARRY,CARRY,MOVE, MOVE, MOVE], undefined, {role: 'upgrader'}) == ERR_NOT_ENOUGH_ENERGY){
                 console.log('Cannot spawn upgrader.  Not enough energy');
             }else {
                 console.log('Spawning new upgrader');

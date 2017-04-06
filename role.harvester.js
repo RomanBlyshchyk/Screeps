@@ -16,6 +16,7 @@ var roleHarvester = {
         // basic movements:
 	    if(creep.carry.energy < creep.carryCapacity) {
             var target = creep.pos.findClosestByRange(FIND_DROPPED_ENERGY);
+            var sources = creep.room.find(FIND_SOURCES);
             if(target) {
                 if(creep.pickup(target) == ERR_NOT_IN_RANGE) {
                     creep.moveTo(target);
