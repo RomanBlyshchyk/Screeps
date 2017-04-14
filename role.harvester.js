@@ -6,7 +6,7 @@ var roleHarvester = {
         // Keep 2 creesp of this type alive:
         var harvesters = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester');
         if(harvesters.length < 3) {
-            if(Game.spawns['Spawn1'].createCreep([WORK,WORK,CARRY,MOVE,MOVE], undefined, {role: 'harvester'}) == ERR_NOT_ENOUGH_ENERGY){
+            if(Game.spawns['Spawn1'].createCreep([WORK,CARRY,MOVE,MOVE], undefined, {role: 'harvester'}) == ERR_NOT_ENOUGH_ENERGY){
                 //console.log('Cannot spawn harvester.  Not enough energy');
             }else {
                 console.log('Spawning new harvester');

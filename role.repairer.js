@@ -6,7 +6,7 @@ var roleRepairer = {
 
         // Keep 2 creesp of this type alive:
         var repairers = _.filter(Game.creeps, (creep) => creep.memory.role == 'repairer');
-        if(repairers.length < 2) {
+        if(repairers.length < 3) {
             if(Game.spawns['Spawn1'].createCreep([WORK,WORK,CARRY,MOVE,MOVE,MOVE], undefined, {role: 'repairer'}) == ERR_NOT_ENOUGH_ENERGY){
                 //console.log('Cannot spawn repairer.  Not enough energy');
             }else {
@@ -41,6 +41,7 @@ var roleRepairer = {
             // if we find one
             if (structure != undefined) {
                 // try to repair it, if it is out of range
+                creep.say('trying to repair');
                 if (creep.repair(structure) == ERR_NOT_IN_RANGE) {
                     // move towards it
                     creep.moveTo(structure);
